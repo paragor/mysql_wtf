@@ -15,6 +15,19 @@ WHERE (
   and type = 'history'
 ORDER BY priority DESC;
 ```
+result:
+| priority |
+| :--- |
+| 99 |
+| 88 |
+| 33 |
+| 25 |
+| 10 |
+| 0 |
+| 200 |
+| 200 |
+
+
 ```sql
 SELECT priority
 FROM table_without_index
@@ -27,6 +40,18 @@ WHERE (
 ORDER BY priority DESC;
 
 ```
+result:
+| priority |
+| :--- |
+| 200 |
+| 200 |
+| 99 |
+| 88 |
+| 33 |
+| 25 |
+| 10 |
+| 0 |
+
 
 чтобы обнулить базу:
 ```bash
